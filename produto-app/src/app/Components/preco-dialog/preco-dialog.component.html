@@ -1,0 +1,29 @@
+
+
+<div class="preco-dialog">
+    <div class="preco-dialog-header">
+      <h2>Definir Preço</h2>
+    </div>
+    <div class="preco-dialog-body">
+      <form [formGroup]:="precoForm">
+        <div class="form-group">
+          <label for="precoVenda">Preço de Venda:</label>
+          <input type="number" id="precoVenda" formControlName="precoVenda" class="form-control">
+          <div *ngIf="precoForm.get('precoVenda').invalid && precoForm.get('precoVenda').touched">
+            <small class="error">Campo obrigatório</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="precoCusto">Preço de Custo:</label>
+          <input type="number" id="precoCusto" formControlName="precoCusto" class="form-control">
+          <div *ngIf="precoForm.get('precoCusto').invalid && precoForm.get('precoCusto').touched">
+            <small class="error">Campo obrigatório</small>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="preco-dialog-footer">
+      <button class="btn btn-primary" (click)="salvarPreco()">Salvar</button>
+      <button class="btn btn-secondary" (click)="fecharDialog()">Cancelar</button>
+    </div>
+  </div>
