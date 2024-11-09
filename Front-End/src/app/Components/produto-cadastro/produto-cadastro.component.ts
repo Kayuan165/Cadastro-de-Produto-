@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../produto.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-produto-cadastro',
+  standalone: true,
+  imports:[
+  ],
   templateUrl: './produto-cadastro.component.html',
   styleUrls: ['./produto-cadastro.component.scss']
 })
@@ -26,7 +30,6 @@ export class ProdutoCadastroComponent implements OnInit {
     if (this.produtoForm.valid) {
       this.produtoService.post(this.produtoForm.value).subscribe(() => {
       });
-    } else {
     }
   }
 

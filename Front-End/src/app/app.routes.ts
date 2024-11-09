@@ -22,10 +22,4 @@ export const routes: Routes = [
     component: ProdutoCadastroComponent
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-  declarations:[ProdutoConsultaComponent, ProdutoCadastroComponent]
-})
 export class ProdutoRoutes { }

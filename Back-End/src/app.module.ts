@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProdutoModule } from './modules/produto.module';
 import { LojaModule } from './modules/loja.module';
-import { Produto } from './Models/produto.entity'; 
-import { Loja } from './Models/loja.entity'; 
-import { ProdutoLoja } from './Models/produto-loja.entity'; 
+import { Produto } from './Models/produto.entity';
+import { Loja } from './Models/loja.entity';
+import { ProdutoLoja } from './Models/produto-loja.entity';
 
 @Module({
   imports: [

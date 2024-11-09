@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PrecoDialogComponent } from './Components/preco-dialog/preco-dialog.component';
 import { ProdutoRoutes } from './app.routes';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-produto',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports:[ProdutoRoutes]
+  imports:[RouterOutlet]
 })
 export class ProdutoComponent implements OnInit {
   constructor(private dialog: MatDialog) { }

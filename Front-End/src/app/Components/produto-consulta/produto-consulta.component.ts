@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../produto.service';
+import { RouterOutlet } from '@angular/router';
 
 interface ProdutoLoja{
   precoVenda: number;
@@ -7,6 +8,9 @@ interface ProdutoLoja{
 
 @Component({
   selector: 'app-produto-consulta',
+  standalone: true,
+  imports:[
+  ],
   templateUrl: './produto-consulta.component.html',
   styleUrls: ['./produto-consulta.component.scss']
 })

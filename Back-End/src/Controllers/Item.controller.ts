@@ -1,11 +1,19 @@
-import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  Put,
+  Delete,
+} from '@nestjs/common';
 import { ProdutoService } from '../Service/item.service';
 import { Produto } from '../Models/produto.entity';
 import { CreateProdutoDto } from 'src/modules/create-produto.dto';
 
 @Controller()
 export class ProdutoController {
-  constructor(private readonly produtoService: ProdutoService) { }
+  constructor(private readonly produtoService: ProdutoService) {}
 
   @Get()
   findAll(): Promise<Produto[]> {
